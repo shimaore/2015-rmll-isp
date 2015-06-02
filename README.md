@@ -208,6 +208,7 @@ Portabilité
   Automatisation à prévoir pour le jour et l'heure de porta.
 
 APNF = Association de la Portabilité des Numéros Fixes
+APNF = Association des Plateformes de Normalisation des Flux inter-opérateurs
 
 Annuaire
 --------
@@ -308,3 +309,25 @@ Facturation
 - à destination des abonnés
 - à destination des tiers (reversement entrant sur géo/non-géo)
 - en provenance des tiers
+
+
+Ca marche pas
+=============
+
+<div class="notes">
+Un petit jeu pour finir, trouvez l'intru (parmi ces listes de causes possibles se trouvent des situations qui n'ont pas été rencontrée par notre support, pouvez-vous les identifier?)
+</div>
+
+Voix hachée / de robot
+----------------------
+
+- Téléphone DECT: L'utilisateur a remplacé les piles rechargeables par des piles non-rechargeables bas de gamme. L'utilisateur appelle depuis le fond du jardin du voisin. La station DECT est reliée par wifi. La station DECT est reliée par CPL.
+- Pertes de paquet sur le lien wifi. Sur les CPL. Sur le routeur d'abonné. Sur le lien fibre. Sur le lien radio,
+
+Appellent ne passent pas
+------------------------
+
+- Pas de tonalité: ATA pas branché sur le secteur. ATA pas branché sur la connexion Internet. Parefeu mis en place par l'utilisateur bloque SIP.
+- Déconnexion au bout de 32s: Parefeu mis en place par l'utilisateur modifie la signalisation pour qu'elle fonctionne mieux. Table de traduction NAT avec timer trop bas. (Signalisation incomplète: ACK pas reçu.)
+- Impossible d'être appelé: ATA ou téléphone pas branché. Parefeu en rade. Liaison Internet en rade. DNS mal configuré. Mauvais nom d'utilisateur, mauvais mot de passe, mauvais nom du domaine d'enregistrement, délai d'enregistrement trop court, serveur de téléphonie en rade, portabilité mal faite, utilisateur au dessous du niveau de la mer.
+- Impossible d'appeler: pareil, plus table de routage de télélphonie incomplète, numéro mal composé, upstream qui ne répond pas assez vite, appel vers un mobile en limite de réception, numéro hors forfait sur un forfait bloqué, ..
