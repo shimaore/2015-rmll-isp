@@ -286,7 +286,7 @@ Matériel
 TODO: inclure photos
 
 Matériel (2)
-============
+------------
 
 Serveurs:
 
@@ -298,7 +298,7 @@ Serveurs:
 TODO: inclure schéma
 
 Aspects humains
-===============
+---------------
 
 Outils pour le support:
 
@@ -309,7 +309,7 @@ Outils pour le support:
   - pré-décroché
 
 Les autres applications
-=======================
+-----------------------
 
 * Messagerie vocale
 * Renvois d'appel
@@ -317,14 +317,14 @@ Les autres applications
 * Centrex IP...
 
 Routage
-=======
+-------
 
 * Plan de numérotation Français:
   * SVA
   * Astuces dans le plan géo = DOM-TOM intégrés!
 
 Urgences
-========
+--------
 
 * Obligation légale (Art D.98-8-3 Code des postes et communication électroniques)
 
@@ -342,7 +342,7 @@ Urgences
     196 : Sauvetage Maritime (CROSS)
 
 Urgences (2)
-============
+------------
 
 * Contacter chaque préfecture individuellement
 * Formats différents (mais, mais... format CAAU-PDAA)
@@ -357,13 +357,13 @@ Urgences (2)
 http://rramuir.org/rramu-participe-activement-au-lancement-de-la-plate-forme-de-localisation-des-appels-durgence/
 
 Tarification
-============
+------------
 
 * Upstream + marge
 * SVA = tarifs publics fin 2015 -- difficile de revendre sans accès SS7
 
 Facturation
-===========
+-----------
 
 - à destination des abonnés
 - à destination des tiers (reversement entrant sur géo/non-géo)
@@ -384,9 +384,15 @@ Voix hachée / de robot
 - Pertes de paquet sur le lien wifi. Sur les CPL. Sur le routeur d'abonné. Sur le lien fibre. Sur le lien radio,
 
 Appels ne passent pas
-------------------------
+----------------------
 
 - Pas de tonalité: ATA pas branché sur le secteur. ATA pas branché sur la connexion Internet. Parefeu mis en place par l'utilisateur bloque SIP.
 - Déconnexion au bout de 32s: Parefeu mis en place par l'utilisateur modifie la signalisation pour qu'elle fonctionne mieux. Table de traduction NAT avec timer trop bas. (Signalisation incomplète: ACK pas reçu.)
 - Impossible d'être appelé: ATA ou téléphone pas branché. Parefeu en rade. Liaison Internet en rade. DNS mal configuré. Mauvais nom d'utilisateur, mauvais mot de passe, mauvais nom du domaine d'enregistrement, délai d'enregistrement trop court, serveur de téléphonie en rade, portabilité mal faite, utilisateur au dessous du niveau de la mer.
 - Impossible d'appeler: pareil, plus table de routage de télélphonie incomplète, numéro mal composé, upstream qui ne répond pas assez vite, appel vers un mobile en limite de réception, numéro hors forfait sur un forfait bloqué, ..
+
+Merci!
+======
+
+
+https://gitlab.k-net.fr/u/shimaore/2015-rmll-isp
