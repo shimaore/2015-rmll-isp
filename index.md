@@ -271,7 +271,7 @@ Par exemple:
 Routage avec portabilité
 ------------------
 
-En sortie:
+**En sortie**
 
 - Soit vous faites la traduction
   <div class="notes">
@@ -284,11 +284,20 @@ En sortie:
 
 ------------
 
-En entrée:
+**En entrée**
 
-- Les numéros portés sont présentés sous la forme
-      <préfixe-porta:ZABPQ> <numéro-porté:ZABPQMCDU>
-  soit 14 chiffres.
+Les numéros portés sont présentés sous la forme
+
+<table>
+<tr>
+  <td>ZAPBPQ</td><td>ZABPQMCDU</td>
+</tr>
+<tr>
+  <td>préfixe de porta</td><td>numéro porté</td>
+</tr>
+</table>
+
+soit 14 chiffres.
 
 Les autres opérateurs
 =====================
