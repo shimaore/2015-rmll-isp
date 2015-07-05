@@ -318,37 +318,49 @@ numéro porté
 </section></section>
 <section><section id="les-autres-opérateurs" class="titleslide slide level1"><h1>Les autres opérateurs</h1></section><section id="interco" class="slide level2">
 <h1>Interco</h1>
+<p><strong>Sortant</strong></p>
 <ul>
-<li><p>Sortant</p></li>
-<li>SIP</li>
+<li>A priori SIP avec <em>N</em> opérateurs SIP</li>
 <li>Sauf SVA</li>
-<li><p>Sauf FT (pas de fax T.38 dans l'offre IP)</p></li>
-<li><p>Entrant</p></li>
+<li>Sauf appels vers/via FT (pas de fax T.38 dans l'offre IP)</li>
+</ul>
+</section><section id="interco-1" class="slide level2">
+<h1>Interco</h1>
+<p><strong>Entrant</strong></p>
+<ul>
 <li>SS7</li>
-<li><p>SIP FT = pas de fax</p></li>
+<li>SIP FT = pas de fax</li>
 </ul>
 <aside class="notes">
 <p>Quelques pointeurs pour vous donner une idée de la complexité de mise en oeuvre, que ce soit en SS7 ou en SIP:</p>
 <ul>
 <li><p>http://arcep.fr/uploads/tx_gsavis/14-1485.pdf parle en particulier (pages 37 et 38) de la transition SS7 vers IP, et des difficultés pour ce qui concerne les services qui présentent des &quot;contraintes fortes de syncrhonisation&quot; -- fax, modem, alarmes, ..</p></li>
-<li><p>Example d'offre de référence http://www.corporate.bouyguestelecom.fr/wp-content/uploads/2015/01/OFFRE-DE-REFERENCE-Janvier-2015.pdf</p></li>
+<li><p>Example d'offre de référence (celle-là est lisible): http://www.corporate.bouyguestelecom.fr/wp-content/uploads/2015/01/OFFRE-DE-REFERENCE-Janvier-2015.pdf</p></li>
 <li>Tests pour l'interco SIP: http://www.fftelecoms.org/sites/fftelecoms.org/files/contenus_lies/cahier_tests_sip_fft-v1.1_cleandoc.pdf</li>
 </ul>
 </aside>
 </section><section id="portabilité" class="slide level2">
 <h1>Portabilité</h1>
+<p><strong>Portabilité sortante</strong></p>
+<p>L'usager s'en va</p>
 <ul>
-<li><p>Portabilité sortante = l'usager s'en va</p></li>
 <li>Nécessite d'avoir une équipe de porta sortante pour vérifier les RIO, gérer les problèmes techniques, ..</li>
-<li><p>Notifications reçues via l'APNF.</p></li>
-<li><p>Portabilité entrante = usager arrive</p></li>
-<li>Demande faite via l'APNF.</li>
-<li><p>Automatisation à prévoir pour le jour et l'heure de porta.</p></li>
-<li>Nouveauté 2015: RIO fixe
+<li>Notifications reçues via l'APNF</li>
+</ul>
+</section><section class="slide level2">
+
+<p><strong>Portabilité entrante</strong></p>
+<p>Usager arrive</p>
+<ul>
+<li>Demande faite via l'APNF</li>
+<li>Automatisation à prévoir pour le jour et l'heure de porta</li>
+</ul>
+</section><section class="slide level2">
+
+<p>Nouveauté 2015: RIO fixe</p>
 <aside class="notes">
 <p><a href="http://arcep.fr/uploads/tx_gsavis/13-0830.pdf">ARCEP: RIO Fixe</a></p>
-</aside></li>
-</ul>
+</aside>
 <p>APNF = Association des Plateformes de Normalisation des Flux inter-opérateurs</p>
 <aside class="notes">
 <p>L'APNF était auparavant l' Association de la Portabilité des Numéros Fixes; elle a récemment changé de nom pour indiquer qu'elle s'occupe maintenant aussi du RSVA, de la PFLAU, etc. Donc APNF = Association des Plateformes de Normalisation des Flux inter-opérateurs.</p>
@@ -366,14 +378,14 @@ numéro porté
 </aside>
 </section><section id="trafic-de-la-responsabilité-de..." class="slide level2">
 <h1>Trafic de la responsabilité de...</h1>
-<p>&quot;Trafic de la responsabilité de&quot; = qui reçoit une facture.</p>
+<p>= qui reçoit une facture</p>
 <aside class="notes">
 <p>C'est une terminologie qu'on trouve en particulier dans les documentations FT.</p>
 </aside>
 </section><section class="slide level2">
 
+<p><strong>&quot;Entrant&quot;</strong></p>
 <ul>
-<li><p>&quot;Entrant&quot;</p></li>
 <li>Responsabilité FT = vous envoyez une facture à FT
 <ul>
 <li>Géographiques</li>
@@ -392,8 +404,8 @@ numéro porté
 </aside>
 </section><section class="slide level2">
 
+<p><strong>&quot;Sortant&quot;</strong></p>
 <ul>
-<li><p>&quot;Sortant&quot;</p></li>
 <li>Responsabilité tiers = vous envoyez une facture au tiers
 <ul>
 <li>Numéros spéciaux à tarification gratuite</li>
@@ -407,15 +419,16 @@ numéro porté
 <aside class="notes">
 <p>En pratique, sur du sortant SIP, ne pas s'attendre à du reversement (en gros les appels de vos usagers vers des numéros verts sont à vos frais de transports, dans le meilleur des cas); au contraire vérifier les factures reçues!</p>
 </aside>
-</section><section id="sva" class="slide level2">
-<h1>SVA</h1>
-<p>Services à Valeur Ajoutée</p>
-<p>Du nouveau en 2015:</p>
+</section><section id="sva-services-à-valeur-ajoutée" class="slide level2">
+<h1>SVA <span class="try">Services à Valeur Ajoutée</span></h1>
+<p>Nouveauté 2015:</p>
 <ul>
-<li>déploiement du service RSVA de l'APNF:</li>
-<li>Les coûts des services <code>C+S</code> sont dans une base unique.</li>
-<li>Les opérateurs ont obligation d'utiliser ces coûts.</li>
-<li>les services qui ne suivent pas C+S ont jusqu'à 2017 pour s'y mettre.</li>
+<li>Déploiement du service RSVA de l'APNF
+<ul>
+<li>Les coûts des services <code>C+S</code> sont dans une base unique</li>
+<li>Les opérateurs ont obligation d'utiliser ces coûts</li>
+</ul></li>
+<li>Les services qui ne suivent pas C+S ont jusqu'à 2017 pour s'y mettre</li>
 </ul>
 <aside class="notes">
 <p>Du coup ça oblige à avoir une interco native, sinon vous revendez les services à coût.</p>
@@ -427,15 +440,18 @@ numéro porté
 <p>Le routage des appels sortant entraîne la majorité des coûts qui vous sont facturés. Une bonne maîtrise du routage à moindre coûts (LCR) et des préfixes sortants est donc indispensable!</p>
 </aside>
 <ul>
-<li>Plan de numérotation Français:</li>
+<li>Plan de numérotation Français
+<ul>
 <li>SVA</li>
 <li>Astuces dans le plan géo = DOM-TOM intégrés!</li>
+</ul></li>
 <li>Plan de numérotation international</li>
 </ul>
 <aside class="notes">
 <p>Le plan de numérotation international (comme le plan français, mais c'est pire à l'international) oblige à bien maîtriser les coûts des opérateurs utilisés.</p>
 <p>Une &quot;table A-to-Z&quot; est indispensable, qui indique pour chaque préfixe de numérotation les coûts d'établissement d'appel, la durée initiale, et le coût par durée supplémentaire. Les durée de comptabilisation sont rarement &quot;à la seconde dès la première seconde&quot;.</p>
 <p>L'utilisation des <a href="http://www.itu.int/oth/T0202.aspx?parent=T0202">références ITU</a> est pratique mais rarement suffisante pour clarifier.</p>
+<p>Prévoir un demi-poste au moins pour s'en occuper.</p>
 </aside>
 </section><section id="urgences" class="slide level2">
 <h1>Urgences</h1>
@@ -457,6 +473,7 @@ numéro porté
 </aside>
 </section><section id="urgences-2" class="slide level2">
 <h1>Urgences (2)</h1>
+<p>Obtenir les traductions</p>
 <ul>
 <li>Contacter chaque préfecture individuellement</li>
 <li>Formats différents (mais, mais... format PDAA-CAAU)</li>
@@ -468,11 +485,9 @@ numéro porté
 <li>CAAU (Centres d'Accueil des Appels d'Urgence) Centre d'Appel =&gt; numéro national ou géographique</li>
 </ul>
 </aside>
-<ul>
-<li><p>Traduction pour les fixes</p>
-<p>(code INSEE commune appelant) + (numéro d'urgence) =&gt; un ou deux numéros (géo)</p></li>
-<li><p>PFLAU = informations de localisation</p></li>
-</ul>
+<p>Traduction pour les fixes</p>
+<pre><code>(code INSEE commune appelant) + (numéro d'urgence) =&gt; un ou deux numéros (géo)</code></pre>
+<p>Nouveauté 2015! PFLAU = informations de localisation</p>
 <aside class="notes">
 <p>Jusqu'à présent les centres d'appels devaient payer FT pour obtenir l'annuaire inversé sur les numéros en liste rouge etc. La PFLAU (via l'APNF) va standardiser les échanges. Voir http://rramuir.org/rramu-participe-activement-au-lancement-de-la-plate-forme-de-localisation-des-appels-durgence/ et http://circulaires.legifrance.gouv.fr/pdf/2015/06/cir_39729.pdf</p>
 </aside>
@@ -482,7 +497,7 @@ numéro porté
 <p>Construire une offre nécessite de bien comprendre ses coûts.</p>
 </aside>
 <ul>
-<li>Sortant: upstream + marge</li>
+<li>Sortant: coûts opérateurs + coûts fixes</li>
 <li>SVA = tarifs publics fin 2015</li>
 </ul>
 </section><section id="facturation" class="slide level2">
@@ -501,19 +516,44 @@ numéro porté
 </aside>
 <p>Rapprochement des facturations.</p>
 </section></section>
-<section><section id="aspects-humains" class="titleslide slide level1"><h1>Aspects humains</h1></section></section>
-<section><section id="système-dinformation" class="titleslide slide level1"><h1>Système d'information</h1></section></section>
+<section><section id="système-dinformation" class="titleslide slide level1"><h1>Système d'information</h1></section><section id="aspects-humains" class="slide level2">
+<h1>Aspects humains</h1>
+<p>Outils pour le support</p>
+<ul>
+<li>traces (SIP)</li>
+<li>CDRs en temps réel</li>
+<li>Surveillance des timers / statistiques</li>
+<li>Call Success Rate</li>
+<li>Pré-décroché</li>
+</ul>
+</section><section id="rôles-du-si" class="slide level2">
+<h1>Rôles du SI</h1>
+<aside class="notes">
+<p>En guise de conclusion, c'est le système d'information qui comme toujours porte le plus gros des aspects techniques.</p>
+</aside>
+<ul>
+<li>provisioning (numéros, clients, matériel, opérateurs)</li>
+<li>récupération des tickets (CDR)</li>
+<li>valorisation des tickets (&quot;rating&quot;)</li>
+<li>édition des factures</li>
+<li>panel client</li>
+</ul>
+</section></section>
 <section><section id="ca-marche-pas" class="titleslide slide level1"><h1>Ca marche pas</h1></section><section id="voix-hachée-de-robot" class="slide level2">
 <h1>Voix hachée / de robot</h1>
 <ul>
 <li>Téléphone DECT: L'utilisateur a remplacé les piles rechargeables par des piles non-rechargeables bas de gamme. L'utilisateur appelle depuis le fond du jardin du voisin. La station DECT est reliée par wifi. La station DECT est reliée par CPL.</li>
-<li>Pertes de paquet sur le lien wifi. Sur les CPL. Sur le routeur d'abonné. Sur le lien fibre. Sur le lien radio,</li>
+<li>Pertes de paquet sur le lien wifi. Sur les CPL. Sur le routeur d'abonné. Sur le lien fibre. Sur le lien radio.</li>
 </ul>
 </section><section id="appels-ne-passent-pas" class="slide level2">
 <h1>Appels ne passent pas</h1>
 <ul>
 <li>Pas de tonalité: ATA pas branché sur le secteur. ATA pas branché sur la connexion Internet. Parefeu mis en place par l'utilisateur bloque SIP.</li>
 <li>Déconnexion au bout de 32s: Parefeu mis en place par l'utilisateur modifie la signalisation pour qu'elle fonctionne mieux. Table de traduction NAT avec timer trop bas. (Signalisation incomplète: ACK pas reçu.)</li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
 <li>Impossible d'être appelé: ATA ou téléphone pas branché. Parefeu en rade. Liaison Internet en rade. DNS mal configuré. Mauvais nom d'utilisateur, mauvais mot de passe, mauvais nom du domaine d'enregistrement, délai d'enregistrement trop court, serveur de téléphonie en rade, portabilité mal faite, utilisateur au dessous du niveau de la mer.</li>
 <li>Impossible d'appeler: pareil, plus table de routage de télélphonie incomplète, numéro mal composé, upstream qui ne répond pas assez vite, appel vers un mobile en limite de réception, numéro hors forfait sur un forfait bloqué, ..</li>
 </ul>
