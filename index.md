@@ -125,10 +125,10 @@ en particulier slide 15 "Vue d'ensemble".
 
 ### Chez l'abonné
 
-  - interface analogique: DECT, fax, .. = ATA
-  - téléphone IP
-  - base DECT IP
-  - smartphone avec logiciel SIP
+- interface analogique: DECT, fax, .. = ATA
+- téléphone IP
+- base DECT IP
+- smartphone avec logiciel SIP
 
 ### Autoprov
 
@@ -200,7 +200,11 @@ Ressources code point sémaphore:
 
 * Pour connecter une gateway SS7 (code national à cinq chiffres)
 
+<div class="notes">
+Les formulaires sont sur le site de l'ARCEP:
+
 https://extranet.arcep.fr/portail/Op%C3%A9rateursCE/Num%C3%A9rotation.aspx#FORM
+</div>
 
 Géographiques
 -------------
@@ -247,13 +251,13 @@ Routage avec portabilité
 En sortie:
 
 - Soit vous faites la traduction
-<div class="notes">
-Utile seulement avec une interco native et en cas de gros volume, étant donné les coûts APNF.
-</div>
+  <div class="notes">
+  Utile seulement avec une interco native et en cas de gros volume, étant donné les coûts APNF.
+  </div>
 - Soit votre opérateur le fait pour vous
-<div class="notes">
-Mais facture un coût supplémentaire par appel pour la traduction.
-</div>
+  <div class="notes">
+  Mais facture un coût supplémentaire par appel pour la traduction.
+  </div>
 
 En entrée:
 
@@ -427,6 +431,7 @@ Urgences (2)
 
 * Contacter chaque préfecture individuellement
 * Formats différents (mais, mais... format PDAA-CAAU)
+
 <div class="notes">
 Certains départements utilisent maintenant des outils communs qui "sortent" des fichiers dans un format normalisé. On obtient essentiellement deux tables:
 
@@ -434,6 +439,7 @@ Certains départements utilisent maintenant des outils communs qui "sortent" des
   Commune + Numéro d'urgence => Centre d'Appel
 * CAAU (Centres d'Accueil des Appels d'Urgence)
   Centre d'Appel => numéro national ou géographique
+
 </div>
 
 * Traduction pour les fixes
