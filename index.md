@@ -1,5 +1,5 @@
 % Téléphonie pour FAI
-% Stéphane Alnet <span class="small">stephane.shimaore.net</span>
+% Stéphane Alnet
 % RMLL 2015
 
 Téléphonie pour FAI
@@ -305,23 +305,28 @@ Les autres opérateurs
 Interco
 -------
 
-* Sortant
+**Sortant**
 
-  - SIP
-  - Sauf SVA
-  - Sauf FT (pas de fax T.38 dans l'offre IP)
+- A priori SIP avec _N_ opérateurs SIP
+- Sauf SVA
+- Sauf appels vers/via FT (pas de fax T.38 dans l'offre IP)
 
-* Entrant
+-----------------
 
-  - SS7
-  - SIP FT = pas de fax
+Interco
+-------
+
+**Entrant**
+
+- SS7
+- SIP FT = pas de fax
 
 <div class="notes">
 Quelques pointeurs pour vous donner une idée de la complexité de mise en oeuvre, que ce soit en SS7 ou en SIP:
 
 * http://arcep.fr/uploads/tx_gsavis/14-1485.pdf parle en particulier (pages 37 et 38) de la transition SS7 vers IP, et des difficultés pour ce qui concerne les services qui présentent des "contraintes fortes de syncrhonisation" -- fax, modem, alarmes, ..
 
-* Example d'offre de référence http://www.corporate.bouyguestelecom.fr/wp-content/uploads/2015/01/OFFRE-DE-REFERENCE-Janvier-2015.pdf
+* Example d'offre de référence (celle-là est lisible): http://www.corporate.bouyguestelecom.fr/wp-content/uploads/2015/01/OFFRE-DE-REFERENCE-Janvier-2015.pdf
 
 * Tests pour l'interco SIP: http://www.fftelecoms.org/sites/fftelecoms.org/files/contenus_lies/cahier_tests_sip_fft-v1.1_cleandoc.pdf
 </div>
@@ -329,17 +334,26 @@ Quelques pointeurs pour vous donner une idée de la complexité de mise en oeuvr
 Portabilité
 -----------
 
-* Portabilité sortante = l'usager s'en va
+**Portabilité sortante**
 
-  - Nécessite d'avoir une équipe de porta sortante pour vérifier les RIO, gérer les problèmes techniques, ..
-  - Notifications reçues via l'APNF.
+L'usager s'en va
 
-* Portabilité entrante = usager arrive
+- Nécessite d'avoir une équipe de porta sortante pour vérifier les RIO, gérer les problèmes techniques, ..
+- Notifications reçues via l'APNF
 
-  - Demande faite via l'APNF.
-  - Automatisation à prévoir pour le jour et l'heure de porta.
+-----------
 
-* Nouveauté 2015: RIO fixe
+**Portabilité entrante**
+
+Usager arrive
+
+- Demande faite via l'APNF
+- Automatisation à prévoir pour le jour et l'heure de porta
+
+-------------
+
+Nouveauté 2015: RIO fixe
+
 <div class="notes">
 [ARCEP: RIO Fixe](http://arcep.fr/uploads/tx_gsavis/13-0830.pdf)
 </div>
@@ -366,7 +380,7 @@ Spécifications: http://www.arcep.fr/uploads/tx_gsavis/06-0639.pdf
 Trafic de la responsabilité de...
 ---------------------------------
 
-"Trafic de la responsabilité de" = qui reçoit une facture.
+= qui reçoit une facture
 
 <div class="notes">
 C'est une terminologie qu'on trouve en particulier dans les documentations FT.
@@ -374,14 +388,14 @@ C'est une terminologie qu'on trouve en particulier dans les documentations FT.
 
 --------------
 
-* "Entrant"
+**"Entrant"**
 
-  - Responsabilité FT = vous envoyez une facture à FT
+-   Responsabilité FT = vous envoyez une facture à FT
     - Géographiques
     - Non-géographiques
     - SVA (ZA=81, 82, 89)
     - Numéro courts (3BPQ, 10YT, 118XYZ)
-  - Responsabilité FAI = FT vous envoie une facture
+-   Responsabilité FAI = FT vous envoie une facture
     - Numéros spéciaux à tarification gratuite (ZAB=800-805)
     - Numéros spéciaux à tarification banalisée (ZAB=806-809)
 
@@ -391,29 +405,28 @@ En pratique, le reversement entrant ne commence à jouer qu'à partir de dizaine
 
 -----------------
 
-* "Sortant"
+**"Sortant"**
 
-  - Responsabilité tiers = vous envoyez une facture au tiers
+-   Responsabilité tiers = vous envoyez une facture au tiers
     - Numéros spéciaux à tarification gratuite
     - Numéros spéciaux à tarification banalisée (?)
-  - Responsabilité FAI = on vous envoie une facture
+-   Responsabilité FAI = on vous envoie une facture
     - Tout le reste
 
 <div class="notes">
 En pratique, sur du sortant SIP, ne pas s'attendre à du reversement (en gros les appels de vos usagers vers des numéros verts sont à vos frais de transports, dans le meilleur des cas); au contraire vérifier les factures reçues!
 </div>
 
-SVA
+SVA <span class="try">Services à Valeur Ajoutée</span>
 ---
 
-Services à Valeur Ajoutée
 
-Du nouveau en 2015:
+Nouveauté 2015:
 
-* déploiement du service RSVA de l'APNF:
-  * Les coûts des services `C+S` sont dans une base unique.
-  * Les opérateurs ont obligation d'utiliser ces coûts.
-* les services qui ne suivent pas C+S ont jusqu'à 2017 pour s'y mettre.
+*   Déploiement du service RSVA de l'APNF
+    * Les coûts des services `C+S` sont dans une base unique
+    * Les opérateurs ont obligation d'utiliser ces coûts
+*   Les services qui ne suivent pas C+S ont jusqu'à 2017 pour s'y mettre
 
 <div class="notes">
 Du coup ça oblige à avoir une interco native, sinon vous revendez les services à coût.
@@ -430,9 +443,9 @@ Le routage des appels sortant entraîne la majorité des coûts qui vous sont fa
 Une bonne maîtrise du routage à moindre coûts (LCR) et des préfixes sortants est donc indispensable!
 </div>
 
-* Plan de numérotation Français:
-  * SVA
-  * Astuces dans le plan géo = DOM-TOM intégrés!
+*   Plan de numérotation Français
+    * SVA
+    * Astuces dans le plan géo = DOM-TOM intégrés!
 * Plan de numérotation international
 
 <div class="notes">
@@ -441,6 +454,8 @@ Le plan de numérotation international (comme le plan français, mais c'est pire
 Une "table A-to-Z" est indispensable, qui indique pour chaque préfixe de numérotation les coûts d'établissement d'appel, la durée initiale, et le coût par durée supplémentaire. Les durée de comptabilisation sont rarement "à la seconde dès la première seconde".
 
 L'utilisation des [références ITU](http://www.itu.int/oth/T0202.aspx?parent=T0202) est pratique mais rarement suffisante pour clarifier.
+
+Prévoir un demi-poste au moins pour s'en occuper.
 </div>
 
 Urgences
@@ -466,6 +481,8 @@ Urgences
 Urgences (2)
 ------------
 
+Obtenir les traductions
+
 * Contacter chaque préfecture individuellement
 * Formats différents (mais, mais... format PDAA-CAAU)
 
@@ -479,11 +496,12 @@ Certains départements utilisent maintenant des outils communs qui "sortent" des
 
 </div>
 
-* Traduction pour les fixes
+Traduction pour les fixes
 
     (code INSEE commune appelant) + (numéro d'urgence) => un ou deux numéros (géo)
 
-* PFLAU = informations de localisation
+Nouveauté 2015!
+PFLAU = informations de localisation
 
 <div class="notes">
 Jusqu'à présent les centres d'appels devaient payer FT pour obtenir l'annuaire inversé sur les numéros en liste rouge etc.
@@ -499,7 +517,7 @@ Tarification
 Construire une offre nécessite de bien comprendre ses coûts.
 </div>
 
-* Sortant: upstream + marge
+* Sortant: coûts opérateurs + coûts fixes
 * SVA = tarifs publics fin 2015
 
 Facturation
@@ -518,8 +536,11 @@ Nombreuses obligations légales en terme de contenu des factures des abonnés:
 
 Rapprochement des facturations.
 
+Système d'information
+=====================
+
 Aspects humains
-===============
+---------------
 
 Outils pour le support
 
@@ -529,8 +550,8 @@ Outils pour le support
   - Call Success Rate
   - Pré-décroché
 
-Système d'information
-=====================
+Rôles du SI
+-----------
 
 <div class="notes">
 En guise de conclusion, c'est le système d'information qui comme toujours porte le plus gros des aspects techniques.
@@ -554,17 +575,22 @@ Voix hachée / de robot
 ----------------------
 
 - Téléphone DECT: L'utilisateur a remplacé les piles rechargeables par des piles non-rechargeables bas de gamme. L'utilisateur appelle depuis le fond du jardin du voisin. La station DECT est reliée par wifi. La station DECT est reliée par CPL.
-- Pertes de paquet sur le lien wifi. Sur les CPL. Sur le routeur d'abonné. Sur le lien fibre. Sur le lien radio,
+- Pertes de paquet sur le lien wifi. Sur les CPL. Sur le routeur d'abonné. Sur le lien fibre. Sur le lien radio.
 
 Appels ne passent pas
 ----------------------
 
 - Pas de tonalité: ATA pas branché sur le secteur. ATA pas branché sur la connexion Internet. Parefeu mis en place par l'utilisateur bloque SIP.
 - Déconnexion au bout de 32s: Parefeu mis en place par l'utilisateur modifie la signalisation pour qu'elle fonctionne mieux. Table de traduction NAT avec timer trop bas. (Signalisation incomplète: ACK pas reçu.)
+
+------------------
+
 - Impossible d'être appelé: ATA ou téléphone pas branché. Parefeu en rade. Liaison Internet en rade. DNS mal configuré. Mauvais nom d'utilisateur, mauvais mot de passe, mauvais nom du domaine d'enregistrement, délai d'enregistrement trop court, serveur de téléphonie en rade, portabilité mal faite, utilisateur au dessous du niveau de la mer.
 - Impossible d'appeler: pareil, plus table de routage de télélphonie incomplète, numéro mal composé, upstream qui ne répond pas assez vite, appel vers un mobile en limite de réception, numéro hors forfait sur un forfait bloqué, ..
 
 Merci!
-======
+------
 
-Présentation: https://gitlab.k-net.fr/shimaore/2015-rmll-isp
+Présentation: http://shimaore.github.io/2015-rmll-isp
+
+Contact: stephane.shimaore.net
