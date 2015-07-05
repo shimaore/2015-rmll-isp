@@ -183,8 +183,8 @@ Ressources
 
 Ressources en numérotation:
 
-* Bloc de numéro non-géographiques (Z=9) (200€/an pour 10k)
-* Bloc de numéro géographiques (Z=1-5) (200€/an pour 10k)
+* Bloc de numéro non-géographiques (Z=9) (10k = 200€/an)
+* Bloc de numéro géographiques (Z=1-5) (10k = 200€/an)
 * Préfixe de portabilité
 * Préfixe RIO
 
