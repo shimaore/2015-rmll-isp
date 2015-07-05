@@ -83,7 +83,7 @@
 </section><section id="signalisation" class="slide level2">
 <h1>Signalisation</h1>
 <ul>
-<li>Comparer avec FTP: signalisation sur port 21, data sur un autre port.</li>
+<li>Comparer avec FTP <span class="tiny">signalisation sur port 21, data sur un autre port</span></li>
 <li>Signalisation = SIP (IP), SS7 (TDM)</li>
 <li>SIP: RFC3261 + plein, plein d'extensions</li>
 <li>Signalisation = authentification, localisation, établissement de session, transport des information de média, ...</li>
@@ -118,32 +118,25 @@
 </section><section id="signalisation-media" class="slide level2">
 <h1>Signalisation + Media</h1>
 <ul>
-<li>Flux RTP généralement associé avec SIP.</li>
-<li>&quot;Trunk&quot; TDM (BPN) généralement associé avec SS7.</li>
+<li>Flux RTP généralement associé avec SIP</li>
+<li>&quot;Trunk&quot; TDM (BPN) généralement associé avec SS7</li>
 </ul>
 <aside class="notes">
 <p>On peut signaler du RTP avec du SS7, les gens qui font du mobile (IMS etc.) sont très friands de ça.</p>
+<p>BPN = Bloc Primaire Numérique, 30 ou 31 canaux à 64kb/s</p>
+<p>Typiquement sur une interco SS7 on aura pour commencer un ou deux BPN avec le lien SS7 qui occupe un canal sur un des BPN.</p>
 </aside>
-</section><section id="numéro-de-téléphone" class="slide level2">
-<h1>Numéro de téléphone</h1>
-<p>Numéro de téléphone en France = <span class="fragment">9 chiffres</span></p>
-<div class="fragment">
-<p><code>ZABPQMCDU</code></p>
-<ul>
-<li><code>Z</code>: 1-5 géographiques, 9 non-géographiques, ..</li>
-<li><code>ZAB</code> ~ région</li>
-<li><code>ZABPQ</code> - 10k numéros, plus petite unité d'allocation</li>
-<li><code>MCDU</code> - chiffres des Milliers, Centaines, Dizaines, Unités</li>
-</ul>
-</div>
 </section></section>
-<section><section id="matériel" class="titleslide slide level1"><h1>Matériel</h1></section><h3 id="chez-labonné">Chez l'abonné</h3>
+<section><section id="matériel" class="titleslide slide level1"><h1>Matériel</h1></section><section id="chez-labonné" class="slide level2">
+<h1>Chez l'abonné</h1>
 <ul>
 <li>interface analogique: DECT, fax, .. = ATA</li>
 <li>téléphone IP</li>
 <li>base DECT IP</li>
 <li>smartphone avec logiciel SIP</li>
-</ul><h3 id="autoprov">Autoprov</h3>
+</ul>
+</section><section id="autoprov" class="slide level2">
+<h1>Autoprov</h1>
 <ul>
 <li>DNS</li>
 <li>DHCP</li>
@@ -152,23 +145,30 @@
 </ul>
 <aside class="notes">
 <p>Autoprov utilise un grand nombre de services: options DHCP, serveurs d'image (firmware) et de configuration. Il y a donc plein de services en amont du simple traitement d'appels.</p>
-</aside><h3 id="traitement-des-appels">Traitement des appels</h3>
+</aside>
+</section><section id="traitement-des-appels" class="slide level2">
+<h1>Traitement des appels</h1>
 <ul>
 <li>redondance (urgences!)</li>
 <li>taxation (€€€!)</li>
 <li>routage des appels</li>
 <li>NAT traversal</li>
-</ul><h3 id="autres-applications">Autres applications</h3>
+</ul>
+</section><section id="autres-applications" class="slide level2">
+<h1>Autres applications</h1>
 <ul>
 <li>Messagerie vocale</li>
 <li>Renvois d'appel</li>
 <li>RIO fixe</li>
 <li>Centrex IP...</li>
-</ul><h3 id="intercos">Intercos</h3>
+</ul>
+</section><section id="intercos" class="slide level2">
+<h1>Intercos</h1>
 <ul>
 <li>Passerelles</li>
 <li>SBC = passerelle logicielle</li>
-</ul></section>
+</ul>
+</section></section>
 <section><section id="les-étapes-arcep" class="titleslide slide level1"><h1>Les étapes ARCEP</h1></section><section id="déclaration" class="slide level2">
 <h1>Déclaration</h1>
 <p>Dans la déclaration ARCEP, bien cocher les cases:</p>
@@ -205,12 +205,29 @@
 <p>Les formulaires sont sur le site de l'ARCEP:</p>
 <p>https://extranet.arcep.fr/portail/Op%C3%A9rateursCE/Num%C3%A9rotation.aspx#FORM</p>
 </aside>
-</section><section id="géographiques" class="slide level2">
+</section></section>
+<section><section id="numéros" class="titleslide slide level1"><h1>Numéros</h1></section><section id="géographiques" class="slide level2">
 <h1>Géographiques</h1>
 <ul>
-<li><p>Cinq zones</p>
-<p>1 Île-de-France 2 Nord-Ouest / Réunion, Mayotte et TAAF1 3 Nord-Est 4 Sud-Est 5 Sud-Ouest / Guadeloupe, Guyane, Martinique et Saint-Pierre-et-Miquelon</p></li>
+<li>Cinq zones</li>
 </ul>
+<table>
+<tr>
+<pre><code>&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Île-de-France&lt;/td&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;2 &lt;/td&gt;&lt;td&gt; Nord-Ouest / Réunion, Mayotte et TAAF &lt;/td&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;3 &lt;/td&gt;&lt;td&gt; Nord-Est &lt;/td&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;4 &lt;/td&gt;&lt;td&gt; Sud-Est &lt;/td&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;5 &lt;/td&gt;&lt;td&gt; Sud-Ouest / Guadeloupe, Guyane, Martinique et Saint-Pierre-et-Miquelon &lt;/td&gt;</code></pre>
+</tr>
+</table>
 </section><section class="slide level2">
 
 <ul>
@@ -255,7 +272,8 @@ Mais facture un coût supplémentaire par appel pour la traduction.
 <ul>
 <li>Les numéros portés sont présentés sous la forme <code>&lt;préfixe-porta:ZABPQ&gt; &lt;numéro-porté:ZABPQMCDU&gt;</code> soit 14 chiffres.</li>
 </ul>
-</section><section id="interco" class="slide level2">
+</section></section>
+<section><section id="les-autres-opérateurs" class="titleslide slide level1"><h1>Les autres opérateurs</h1></section><section id="interco" class="slide level2">
 <h1>Interco</h1>
 <ul>
 <li><p>Sortant</p></li>
