@@ -218,25 +218,25 @@ Numéro de téléphone en France = <span class="fragment">9 chiffres</span>
 Géographiques
 -------------
 
-* Cinq zones
+Cinq zones
 
-  <table>
-  <tr>
-    <td>1</td><td>Île-de-France</td>
-  </tr>
-  <tr>
-    <td>2 </td><td> Nord-Ouest / Réunion, Mayotte et TAAF </td>
-  </tr>
-  <tr>
-    <td>3 </td><td> Nord-Est </td>
-  </tr>
-  <tr>
-    <td>4 </td><td> Sud-Est </td>
-  </tr>
-  <tr>
-    <td>5 </td><td> Sud-Ouest / Guadeloupe, Guyane, Martinique et Saint-Pierre-et-Miquelon </td>
-  </tr>
-  </table>
+<table>
+<tr>
+  <td>1</td><td>Île-de-France</td>
+</tr>
+<tr>
+  <td>2 </td><td> Nord-Ouest / Réunion, Mayotte et TAAF </td>
+</tr>
+<tr>
+  <td>3 </td><td> Nord-Est </td>
+</tr>
+<tr>
+  <td>4 </td><td> Sud-Est </td>
+</tr>
+<tr>
+  <td>5 </td><td> Sud-Ouest / Guadeloupe, Guyane, Martinique et Saint-Pierre-et-Miquelon </td>
+</tr>
+</table>
 
 ----------
 
