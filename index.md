@@ -57,7 +57,7 @@ Transmission
 Signalisation
 -------------
 
-- Comparer avec FTP: signalisation sur port 21, data sur un autre port.
+- Comparer avec FTP <span class="tiny">signalisation sur port 21, data sur un autre port</span>
 - Signalisation = SIP (IP), SS7 (TDM)
 - SIP: RFC3261 + plein, plein d'extensions
 - Signalisation = authentification, localisation, établissement de session, transport des information de média, ...
@@ -93,25 +93,15 @@ SPIROU porte essentiellement sur:
 Signalisation + Media
 ---------------------
 
-- Flux RTP généralement associé avec SIP.
-- "Trunk" TDM (BPN) généralement associé avec SS7.
+- Flux RTP généralement associé avec SIP
+- "Trunk" TDM (BPN) généralement associé avec SS7
 
 <div class="notes">
 On peut signaler du RTP avec du SS7, les gens qui font du mobile (IMS etc.) sont très friands de ça.
-</div>
 
-Numéro de téléphone
--------------------
+BPN = Bloc Primaire Numérique, 30 ou 31 canaux à 64kb/s
 
-Numéro de téléphone en France = <span class="fragment">9 chiffres</span>
-
-<div class="fragment">
-`ZABPQMCDU`
-
-* `Z`: 1-5 géographiques, 9 non-géographiques, ..
-* `ZAB` ~ région
-* `ZABPQ` - 10k numéros, plus petite unité d'allocation
-* `MCDU` - chiffres des Milliers, Centaines, Dizaines, Unités
+Typiquement sur une interco SS7 on aura pour commencer un ou deux BPN avec le lien SS7 qui occupe un canal sur un des BPN.
 </div>
 
 Matériel
@@ -123,14 +113,16 @@ http://stephane.shimaore.net/rmll/RMLL2009%20Telecoms%20Libres.odp
 en particulier slide 15 "Vue d'ensemble".
 </div>
 
-### Chez l'abonné
+Chez l'abonné
+-------------
 
 - interface analogique: DECT, fax, .. = ATA
 - téléphone IP
 - base DECT IP
 - smartphone avec logiciel SIP
 
-### Autoprov
+Autoprov
+--------
 
 - DNS
 - DHCP
@@ -142,21 +134,24 @@ Autoprov utilise un grand nombre de services: options DHCP, serveurs d'image (fi
 Il y a donc plein de services en amont du simple traitement d'appels.
 </div>
 
-### Traitement des appels
+Traitement des appels
+---------------------
 
 - redondance (urgences!)
 - taxation (€€€!)
 - routage des appels
 - NAT traversal
 
-### Autres applications
+Autres applications
+-------------------
 
 * Messagerie vocale
 * Renvois d'appel
 * RIO fixe
 * Centrex IP...
 
-### Intercos
+Intercos
+--------
 
 * Passerelles
 * SBC = passerelle logicielle
@@ -206,16 +201,42 @@ Les formulaires sont sur le site de l'ARCEP:
 https://extranet.arcep.fr/portail/Op%C3%A9rateursCE/Num%C3%A9rotation.aspx#FORM
 </div>
 
+Numéros
+=======
+
+Numéro de téléphone en France = <span class="fragment">9 chiffres</span>
+
+<div class="fragment">
+`ZABPQMCDU`
+
+* `Z`: 1-5 géographiques, 9 non-géographiques, ..
+* `ZAB` ~ région
+* `ZABPQ` - 10k numéros, plus petite unité d'allocation
+* `MCDU` - chiffres des Milliers, Centaines, Dizaines, Unités
+</div>
+
 Géographiques
 -------------
 
 * Cinq zones
 
-    1 Île-de-France
-    2 Nord-Ouest / Réunion, Mayotte et TAAF1
-    3 Nord-Est
-    4 Sud-Est
-    5 Sud-Ouest / Guadeloupe, Guyane, Martinique et Saint-Pierre-et-Miquelon
+  <table>
+  <tr>
+    <td>1</td><td>Île-de-France</td>
+  </tr>
+  <tr>
+    <td>2 </td><td> Nord-Ouest / Réunion, Mayotte et TAAF </td>
+  </tr>
+  <tr>
+    <td>3 </td><td> Nord-Est </td>
+  </tr>
+  <tr>
+    <td>4 </td><td> Sud-Est </td>
+  </tr>
+  <tr>
+    <td>5 </td><td> Sud-Ouest / Guadeloupe, Guyane, Martinique et Saint-Pierre-et-Miquelon </td>
+  </tr>
+  </table>
 
 ----------
 
@@ -264,6 +285,9 @@ En entrée:
 - Les numéros portés sont présentés sous la forme
   `<préfixe-porta:ZABPQ> <numéro-porté:ZABPQMCDU>`
   soit 14 chiffres.
+
+Les autres opérateurs
+=====================
 
 Interco
 -------
