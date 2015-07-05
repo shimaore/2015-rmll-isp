@@ -253,25 +253,26 @@ Sud-Ouest / Guadeloupe, Guyane, Martinique et Saint-Pierre-et-Miquelon
 </table>
 </section><section class="slide level2">
 
+<p>Recette:</p>
 <ul>
 <li>Chaque bloc attribué (de 10k numéros) est associé à une <a href="https://extranet.arcep.fr/portail/LinkClick.aspx?fileticket=vSVvZdbJhtQ%3d&amp;tabid=217&amp;portalid=0&amp;mid=716">ZNE</a> (Zone de Numérotation Élémentaire)</li>
 </ul>
 <p>Par exemple &quot;BEAUVAIS&quot;, ZNE 60057</p>
 <ul>
-<li>Un préfixe de porta utilisable nationalement
+<li>Un préfixe de porta géographique utilisable nationalement
 <aside class="notes">
 <p>En pratique il identifie un point de routage (code sémaphore) pour les appels portés vers un opérateur donné.</p>
 </aside></li>
-<li>Offre encadrée FT = Livraison sur le CAA (Commutateur à Autonomie d'Acheminement) de rattachement en SS7
+<li>Offre régulée FT = Livraison sur le CAA (Commutateur à Autonomie d'Acheminement) de rattachement en SS7
 <aside class="notes">
-<p>Comme il y en a plus de 300 sur la métropole c'est peu jouable pour un petit opérateur. Du coup la négotiation ne se fait pas sur l'offre encadrée mais sur l'offre de référence négociée, sur laquelle FT n'a qu'une obligation de négociation, et où s'appliquent des surcharges dues au transit.</p>
+<p>Comme il y en a plus de 300 sur la métropole c'est peu jouable pour un petit opérateur. Du coup la négotiation ne se fait pas sur l'offre régulée mais sur l'offre de référence négociée, sur laquelle FT n'a qu'une obligation de négociation, et où s'appliquent des surcharges dues au transit.</p>
 </aside></li>
 </ul>
 </section><section id="non-géographiques" class="slide level2">
 <h1>Non géographiques</h1>
 <ul>
 <li>Livraison partout en France</li>
-<li>Un préfixe de porta associé</li>
+<li>Un préfixe de porta non-géo associé</li>
 </ul>
 <p>Par exemple:</p>
 <ul>
@@ -291,9 +292,11 @@ Utile seulement avec une interco native et en cas de gros volume, étant donné 
 Mais facture un coût supplémentaire par appel pour la traduction.
 </aside></li>
 </ul>
+</section><section class="slide level2">
+
 <p>En entrée:</p>
 <ul>
-<li>Les numéros portés sont présentés sous la forme <code>&lt;préfixe-porta:ZABPQ&gt; &lt;numéro-porté:ZABPQMCDU&gt;</code> soit 14 chiffres.</li>
+<li>Les numéros portés sont présentés sous la forme <préfixe-porta:ZABPQ> <numéro-porté:ZABPQMCDU> soit 14 chiffres.</li>
 </ul>
 </section></section>
 <section><section id="les-autres-opérateurs" class="titleslide slide level1"><h1>Les autres opérateurs</h1></section><section id="interco" class="slide level2">
