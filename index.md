@@ -240,26 +240,28 @@ Cinq zones
 
 ----------
 
+Recette:
+
 * Chaque bloc attribué (de 10k numéros) est associé à une [ZNE](https://extranet.arcep.fr/portail/LinkClick.aspx?fileticket=vSVvZdbJhtQ%3d&tabid=217&portalid=0&mid=716) (Zone de Numérotation Élémentaire)
 
   Par exemple "BEAUVAIS", ZNE 60057
 
-* Un préfixe de porta utilisable nationalement
+* Un préfixe de porta géographique utilisable nationalement
 <div class="notes">
 En pratique il identifie un point de routage (code sémaphore) pour les appels portés vers un opérateur donné.
 </div>
 
-* Offre encadrée FT = Livraison sur le CAA (Commutateur à Autonomie d'Acheminement) de rattachement en SS7
+* Offre régulée FT = Livraison sur le CAA (Commutateur à Autonomie d'Acheminement) de rattachement en SS7
 <div class="notes">
 Comme il y en a plus de 300 sur la métropole c'est peu jouable pour un petit opérateur.
-Du coup la négotiation ne se fait pas sur l'offre encadrée mais sur l'offre de référence négociée, sur laquelle FT n'a qu'une obligation de négociation, et où s'appliquent des surcharges dues au transit.
+Du coup la négotiation ne se fait pas sur l'offre régulée mais sur l'offre de référence négociée, sur laquelle FT n'a qu'une obligation de négociation, et où s'appliquent des surcharges dues au transit.
 </div>
 
 Non géographiques
 -----------------
 
 * Livraison partout en France
-* Un préfixe de porta associé
+* Un préfixe de porta non-géo associé
 
 Par exemple:
 
@@ -280,10 +282,12 @@ En sortie:
   Mais facture un coût supplémentaire par appel pour la traduction.
   </div>
 
+------------
+
 En entrée:
 
 - Les numéros portés sont présentés sous la forme
-  `<préfixe-porta:ZABPQ> <numéro-porté:ZABPQMCDU>`
+      <préfixe-porta:ZABPQ> <numéro-porté:ZABPQMCDU>
   soit 14 chiffres.
 
 Les autres opérateurs
