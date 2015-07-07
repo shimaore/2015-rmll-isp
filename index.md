@@ -113,10 +113,9 @@ http://stephane.shimaore.net/rmll/RMLL2009%20Telecoms%20Libres.odp
 en particulier slide 15 "Vue d'ensemble".
 </div>
 
-Vue d'ensemble
---------------
+------------
 
-![Vue d'ensemble](SIP-SS7.svg)
+![](SIP-SS7.svg)
 
 Chez l'abonné
 -------------
@@ -212,6 +211,9 @@ https://extranet.arcep.fr/portail/Op%C3%A9rateursCE/Num%C3%A9rotation.aspx#FORM
 
 Numéros
 =======
+
+Numéros
+-------
 
 Numéro de téléphone en France = <span class="fragment">9 chiffres</span>
 
