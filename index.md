@@ -116,7 +116,7 @@ en particulier slide 15 "Vue d'ensemble".
 Vue d'ensemble
 --------------
 
-![SIP-SS7.svg](Vue d'ensemble)
+![Vue d'ensemble](SIP-SS7.svg)
 
 Chez l'abonné
 -------------
