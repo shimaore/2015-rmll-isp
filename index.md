@@ -161,6 +161,10 @@ Intercos
 * Passerelles
 * SBC = passerelle logicielle
 
+<div class="notes">
+Choix techniques: en fonction des contraintes (temps, argent), on utilise du libre quand c'est faisable.
+</div>
+
 Les étapes ARCEP
 ================
 
