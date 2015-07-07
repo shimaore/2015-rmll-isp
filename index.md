@@ -113,6 +113,11 @@ http://stephane.shimaore.net/rmll/RMLL2009%20Telecoms%20Libres.odp
 en particulier slide 15 "Vue d'ensemble".
 </div>
 
+Vue d'ensemble
+--------------
+
+![SIP-SS7.svg](Vue d'ensemble)
+
 Chez l'abonné
 -------------
 
@@ -155,6 +160,10 @@ Intercos
 
 * Passerelles
 * SBC = passerelle logicielle
+
+<div class="notes">
+Choix techniques: en fonction des contraintes (temps, argent), on utilise du libre quand c'est faisable.
+</div>
 
 Les étapes ARCEP
 ================
